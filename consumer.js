@@ -1,7 +1,5 @@
 import { Worker } from "bullmq";
 import { connection } from "./redis-connection.js";
-// console.log("connection==>",connection);
-// const connection = { host: "127.0.0.1", port: 6380 };
 const worker = new Worker(
   "messageQueue",
   async (job) => {
