@@ -1,0 +1,12 @@
+services:
+  redis:
+    image: redis
+    container_name: redis-bullmq
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+
+volumes:
+  redis-data:
